@@ -2,7 +2,7 @@
 
 **Dernière mise à jour : 25 novembre 2026**
 
-## Français
+## 🇫🇷 Français
 
 ### 1. Présentation
 
@@ -52,7 +52,7 @@ Pour toute question concernant cette politique de confidentialité, vous pouvez 
 
 ---
 
-## English
+## 🇬🇧 English
 
 ### 1. Introduction
 
