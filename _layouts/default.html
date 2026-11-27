@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'fr' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }} · Tempo</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+
+<body>
+  <div class="site-container">
+
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-name">TEMPO</span>
+        <span class="brand-subtitle">INTERVAL TIMER</span>
+      </a>
+
+      <nav class="language-switch" aria-label="Language">
+        {% if page.lang == "en" %}
+          <a href="{% if page.page_key == 'privacy' %}{{ '/privacy.html' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">FR</a>
+          <span class="language-separator">/</span>
+          <span class="active">EN</span>
+        {% else %}
+          <span class="active">FR</span>
+          <span class="language-separator">/</span>
+          <a href="{% if page.page_key == 'privacy' %}{{ '/en/privacy.html' | relative_url }}{% else %}{{ '/en/' | relative_url }}{% endif %}">EN</a>
+        {% endif %}
+      </nav>
+    </header>
+
+    <div class="site-layout">
+
+      <aside class="sidebar">
+        <nav class="main-nav">
+          {% if page.lang == "en" %}
+            <a href="{{ '/en/' | relative_url }}"
+               class="{% if page.page_key == 'home' %}active{% endif %}">
+              Support
+            </a>
+
+            <a href="{{ '/en/privacy.html' | relative_url }}"
+               class="{% if page.page_key == 'privacy' %}active{% endif %}">
+              Privacy policy
+            </a>
+
+            <a href="mailto:signatures-soyeux.7u@icloud.com">
+              Contact
+            </a>
+          {% else %}
+            <a href="{{ '/' | relative_url }}"
+               class="{% if page.page_key == 'home' %}active{% endif %}">
+              Assistance
+            </a>
+
+            <a href="{{ '/privacy.html' | relative_url }}"
+               class="{% if page.page_key == 'privacy' %}active{% endif %}">
+              Confidentialité
+            </a>
+
+            <a href="mailto:signatures-soyeux.7u@icloud.com">
+              Contact
+            </a>
+          {% endif %}
+        </nav>
+      </aside>
+
+      <main class="content">
+        {{ content }}
+      </main>
+
+    </div>
+
+    <footer class="site-footer">
+      <span>© 2026 Tempo</span>
+      <span>Made by Maner</span>
+    </footer>
+
+  </div>
+</body>
+</html>
