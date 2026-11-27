@@ -1,0 +1,11 @@
+title: Tempo
+description: Assistance et politique de confidentialité de Tempo
+
+url: "https://manerschnetzlon.github.io"
+baseurl: "/tempo-support"
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-relative-links
